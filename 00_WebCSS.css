@@ -61,7 +61,7 @@ header{
   border-radius: 50px;
 }
 
-.area01box:nth-child(even) {
+.area03box:nth-child(even) {
   display: none;
 }
 
@@ -100,7 +100,6 @@ header{
 .area02box{
   flex: 1;
   height: 400px;
-  max-width: 32%;
   background-color: rgb(187, 226, 203);
   text-align: center;
   margin: 0;
@@ -109,7 +108,7 @@ header{
 
 .area02box img {
   margin-top: 30px;
-  width: 80%;
+  width: 50%;
   height: 80%;
   object-fit:fill;
   border-radius: 300px;
@@ -147,7 +146,7 @@ header{
 
 
 
-@media screen and (max-width: 768px) and (min-width:100px) {
+@media screen and (max-width: 768px) and (min-width:50px) {
 
 body{
     background-color: #72e9e9;
@@ -194,39 +193,45 @@ header{
     margin-top: 3%;
 }
 
+
+
 .bodyarea01{
     background-color:  #c4a7d5;
     height:40%;
     width: 94%;
     display:grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 30% 70%;
+    
     justify-content: space-between;
     gap: 1%;/*行列間距*/
     padding: 3%;
     margin-top: 0%;
 }
 
+
 .area01box {
   flex: 1;
-  height: 40%;
-  width: 28%;
+  height: 90%;
+  width: 90%;
   background-color: rgb(219, 200, 227);
   text-align: center;
   margin: 0 0 2% 0;
-  display:grid;
+  display:inline-block;
   border-radius: 10%;
 }
 
-.area01box:nth-child(even) {
-  display: grid;
+.area03box:nth-child(even) {
+  display:inline-block;
+  width: 100%;
+  object-fit: contain;
 }
 
 .area01box img {
   margin: 10% 0% 0% 0%;
   width: 70%;
   height: 80px;
-  object-fit: fill;
-  display: inline-flexbox;
+  object-fit:fill;
+  display:inline-flexbox;
   border-radius: 50%;
 }
 
@@ -249,27 +254,35 @@ header{
     background-color:  #7cdcb2;
     height:40%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content:left;
+    grid-template-columns: 30% 70%;
+    justify-content:space-between;
     gap: 1%;/*行列間距*/
     padding: 5%;
     margin-top: 3%;
 }
 
+
+.area04box{
+  display:inline-block;
+  width: 100%;
+  object-fit: contain;
+}
+
 .area02box{
   flex:1;
-  height: 40%;
-  width: 40%;
+  height: 50%;
+  width: 100%;
   background-color: rgb(187, 226, 203);
   text-align: center;
-  margin: 0;
+  margin: 50% 0 0 0;
   border-radius: 10%;
+  display: inline-block;
 }
 
 .area02box img {
-  margin-top: 10%;
+  margin-top: 20%;
   width: 80%;
-  height: 80%;
+  height: 60%;
   object-fit:fill;
   border-radius: 50%;
 }
@@ -294,22 +307,25 @@ header{
     padding: 1% 0 1% 0; 
 }
 
+.p{
+    font-size: small;
+    object-fit: fill;
+}
 
 .MP_conent{
-    display:contents;
-    grid-column: 1/3;
+    display:inline-flexbox;
 }
 
 .MA_conent{
-    display:contents;
+    display:inline-flexbox;
 }
 
 .ML_conent{
-    display:contents;
+    display:inline-flexbox;
 }
 
 .AM_conent{
-    grid-row: 1/2;
+    display:inline-flexbox;
 }
 
 
