@@ -30,7 +30,7 @@ function updateClock() {
 ];
 
   // 組合時間
-  const timeString = `${year}.${month}.${day}.${days[week]}⏲︎${hours}:${minutes}:${seconds}`;
+  const timeString = `${year}.${month}.${day}. ${days[week]} ⏲︎ ${hours}:${minutes}:${seconds}`;
 
   // 顯示到 HTML
   document.getElementById("clock").innerHTML = timeString;

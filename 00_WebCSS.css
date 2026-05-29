@@ -1,95 +1,134 @@
+/* 一、全域與基本樣式 */
+
 body{
     background-color: #72e9e9;
     margin: 0;
     padding: 3%;
+    font-family: 'Tahoma', 'Arial','Noto Sans TC', 'sans-serif', 'Microsoft JhengHei',;
 }
 
+/* 網頁主要內容白底容器 */
 .bodybk01{
     background-color: antiquewhite;
     margin: 0;
     padding: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
+/* 二、時鐘區 */
 #clock{
     font-size: large;
     font-weight: bolder;
-    color: #AFAF61;    
+    color: #AFAF61;  
+    font-size: larger;  
+    font-weight: bold;
+    padding: 0;
+    border-radius: 8px 8px 0 0;
+    background-color: #FFFFFF;
+    text-align: center;
 }
 
+/* 三、首頁區 */
+.headbk01{
+    background-color: #ffffff;
+    height: 50px;
+    margin:0;
+    text-align: center;
+    border-radius: 0;
+}
 
 header{
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
     text-decoration:solid;
-    font-family: 'Tahoma', 'Arial';
-    font-size: x-large;
-    font-weight: bolder;
+    font-size:x-large;
+    font-weight: bold;
     color: #a5a557;
 }
 
 .headline01{
     background: linear-gradient(to right,
-     #f1f1f1e9, #FFFFFF, #f1f2ee);
+     #e7ab04e9, #FFFFFF, #a0a501);
     height: 5px;
     border: none;
-    margin-top: 3%;
+    margin: 12px auto 0 auto;
+    width: 80%;
+    border-radius: 50%;
 }
 
-.headbk01{
-    background-color: #ffffff;
-    height: 50px;
-    margin:0;
-}
+/* 四、第一區塊 （Grid 3欄佈局） */
 
 .bodyarea01{
     background-color:  #c4a7d5;
-    height:400px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;/*行列間距*/
+    display: grid;
+    gap: 25px;/*行列間距*/
+    padding: 30px;
+    margin-top: -10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+/* 獨立卡片樣式 */
+
+.card-item{
+    background-color: #c4a7d5;
+    border-radius: 12px;
     padding: 50px;
-    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.502);
+    box-shadow: 0 4px 12px rgba(198, 84, 84, 0);
 }
 
+/*卡片圖形圖片框*/
 .area01box {
-  flex: 1;
-  height: 400px;
+  height: 200px;
+  width: 200px;
+  overflow:hidden;
+  display: flex;
   background-color: rgb(219, 200, 227);
-  text-align: center;
-  margin: 0;
-  border-radius: 50px;
-}
-
-.area03box:nth-child(even) {
-  display: none;
-}
-
-.area01box img {
-  margin-top: 30px;
-  width: 80%;
-  height: 80%;
-  object-fit:cover;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 0 0;
   border-radius: 50%;
 }
 
-.area01box button {
+.area01box img {
+  width: 70%;
+  height: 70%;
+  object-fit:cover;
+  border-radius: 100%;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-button {
     width: 88px;
-    height: 20px;
-    object-fit:none;
-    margin-bottom: 0;
-    margin-top: 0px;
+    height: 25px;
+    font-size:small;
+    font-weight:normal;
     border: none;
-    background-color: rgb(154, 187, 254);
+    margin:0 auto 0 auto;
+    background: linear-gradient(transparent 30%,rgb(154, 187, 254));
     color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
+.card-button:hover{
+    background-color: rgb(147, 180, 252);
+    transform: translateY(-2px);
+}
+
+/* 文字介紹樣式 */
+.area03box{
+    font-size:small;
+    line-height:normal;
+    color:#282828;
+    text-align: center;
+}
+
+/* 五、第二區塊：關於我 */
 .bodyarea02{
     background-color:  #7cdcb2;
-    height:400px;
     display: flex;
     justify-content:left;
     gap: 20px;/*行列間距*/
@@ -97,238 +136,117 @@ header{
     margin-top: 10px;
 }
 
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:40px;
+    background-color: rgba(255, 255, 255, 0.502);
+    box-shadow: 0 4px 8px rgba(43, 43, 43, 0);
+    border-radius: 12px;
+    padding: 30px;
+    width: 95%;
+}
+
 .area02box{
-  flex: 1;
-  height: 400px;
+  height: 300px;
+  width: 300px;
+  overflow:hidden;
+  display: flex;
   background-color: rgb(187, 226, 203);
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  border-radius: 50px;
+  border-radius: 50%;
 }
 
 .area02box img {
-  margin-top: 30px;
-  width: 40%;
-  height: 80%;
+  margin: 12% auto 0 auto;
+  width: 58%;
+  height: 58%;
   object-fit:fill;
-  border-radius: 300px;
+  border-radius: 100%;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.area02box button {
-    width: 88px;
-    height: 20px;
-    object-fit:none;
-    margin-bottom: 0;
-    margin-top: 0px;
-    border: none;
-    background-color: rgb(254, 174, 154);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.area02box .card-button {
+    margin: 0 10% 45% auto;
+    background: linear-gradient(rgb(254, 174, 154), transparent 50%);
+}
+/* 關於我按鈕換色 */
+.area02box .card-button:hover
+{
+    background-color: #d6706d;
 }
 
+.area04box{
+    flex: 1;
+    max-width: 600px;
+}
 .AM_conent{
     text-align: left;
-    color: #3973ac;
-    font-size: medium;
-    font-family: SimSun,Microsoft JhengHei;
-    padding: 15%;
-    
+    color: #323232;
+    font-size: small;
+    line-height: normal;
+    padding: 20%;
     
 }
 
 
-#clock{
-    background-color: #FFFFFF;
-    text-align: center;
-}
 
 
 
+/* 六、響應式ＲＷＤ樣式（平板與手機）*/
 @media screen and (max-width: 768px) and (min-width:50px) {
 
 body{
-    background-color: #72e9e9;
-    margin: 0;
     padding: 3%;
 }
 
 .bodybk01{
-    background-color: antiquewhite;
-    margin: 0;
     border: 3%;
-    border-color: antiquewhite;
 }
-
-#clock{
-    font-size: large;
-    font-weight: bolder;
-    color: #AFAF61;    
-}
-
 
 header{
-    text-align: center;
-    height: 20%;
-    line-height: 20%;
-    text-decoration:solid;
-    font-family: 'Tahoma', 'Arial';
     font-size: x-large;
-    font-weight: bolder;
-    color: #a5a557;
 }
 
-.headbk01{
-    background-color: #ffffff;
-    height: 20%;
-    margin:0;
-}
-
-.headline01{
-    background: linear-gradient(to right,
-     #f1f1f1e9, #FFFFFF, #f1f2ee);
-    height: 5px;
-    border: none;
-    margin-top: 3%;
-}
-
-
-
+/*原本區塊改為單欄式卡片垂直排列*/
 .bodyarea01{
-    background-color:  #c4a7d5;
-    height:40%;
-    width: 94%;
-    display:grid;
-    grid-template-columns: 30% 70%;
-    
-    justify-content: space-between;
+    grid-template-columns: 1fr;
     gap: 1%;/*行列間距*/
-    padding: 3%;
-    margin-top: 0%;
+    padding: 12%;
 }
-
+.card-item{
+    padding: 1%;
+}
 
 .area01box {
-  flex: 1;
-  height: 90%;
-  width: 90%;
-  background-color: rgb(219, 200, 227);
-  text-align: center;
-  margin: 0 0 2% 0;
-  display:inline-block;
-  border-radius: 10%;
+  height: 130px;
+  width: 130px;
 }
 
-.area03box:nth-child(even) {
-  display:inline-block;
-  width: 100%;
-  object-fit: contain;
-}
-
-.area01box img {
-  margin: 10% 0% 0% 0%;
-  width: 70%;
-  height: 80px;
-  object-fit:fill;
-  display:inline-flexbox;
-  border-radius: 50%;
-}
-
-.area01box button {
-    width: 80%;
-    height: 10px;
-    object-fit:contain;
-    margin-bottom: 0;
-    margin-top: 0;
-    text-align:center;
-    border: none;
-    background-color: rgb(154, 187, 254);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
+/* 關於我區塊垂直排列 */
 .bodyarea02{
-    background-color:  #7cdcb2;
-    height:40%;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    justify-content:space-between;
-    gap: 1%;/*行列間距*/
-    padding: 5%;
-    margin-top: 3%;
+    padding: 15%;
+    gap:1%;
+}
+
+.about-container{
+    flex-direction: column;
+    padding: 1%;
+    gap:20px;
 }
 
 
-.area04box{
-  display:inline-block;
-  width: 100%;
-  object-fit: contain;
-}
-
-.area02box{
-  flex:1;
-  height: 50%;
-  width: 100%;
-  background-color: rgb(187, 226, 203);
-  text-align: center;
-  margin: 50% 0 0 0;
-  border-radius: 10%;
-  display: inline-block;
-}
-
-.area02box img {
-  margin-top: 20%;
-  width: 80%;
-  height: 60%;
-  object-fit:fill;
-  border-radius: 50%;
-}
-
-.area02box button {
-    width: 80%;
-    height: 10px;
-    object-fit:none;
-    margin-bottom: 0;
-    margin-top: 0;
-    border: none;
-    background-color: rgb(254, 174, 154);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#clock{
-    background-color: #FFFFFF;
-    text-align: center;
-    padding: 1% 0 1% 0; 
-}
-
-.p{
-    font-size: small;
-    object-fit: fill;
-}
-
-.MP_conent{
-    display:inline-flexbox;
-}
-
-.MA_conent{
-    display:inline-flexbox;
-}
-
-.ML_conent{
-    display:inline-flexbox;
+.area02box {
+    width: 140px;
+    height: 140px;
+    margin-top: 10%;
 }
 
 .AM_conent{
-    display:inline-flexbox;
+    margin-top: -20%;
+    text-align: center;
+    font-size: small;
 }
-
-
-
-}
-
