@@ -114,7 +114,7 @@ header{
 }
 
 .card-button:hover{
-    background-color: rgb(147, 180, 252);
+    background-color: rgb(87, 128, 215);
     transform: translateY(-2px);
 }
 
@@ -197,7 +197,7 @@ header{
 
 
 /* 六、響應式ＲＷＤ樣式（平板與手機）*/
-@media screen and (max-width: 768px) and (min-width:50px) {
+@media screen and (max-width: 768px) {
 
 body{
     padding: 3%;
